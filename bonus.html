@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos Especiales</title>
+    <style>
+        /* .class1 {
+            display: block;
+            background-color: blue;
+            color: white;
+        } */
+
+        .container {
+            display: flex;
+            /* flex-direction: row-reverse; 
+            flex-wrap: wrap-reverse; */
+            border: 1px solid;
+            flex-flow: row wrap;
+            /*En main axis*/
+            justify-content: flex-start; /*flex-start, flex-end, space-between, space-around, space-evenly*/
+            /*En cross axis*/
+            align-items: flex-start; /*flex-start, flex-end, center, stretch, baseline*/
+            height: 600px;
+            gap: 10px;
+        }
+
+        .container>div {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            color: wheat;
+        }
+
+        .container>div.larger {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+        }
+
+        .container>div.first {
+            order: -1;
+            flex-grow: 1;
+        }
+
+        .container>div.second {
+            flex-grow: 1;
+        }
+
+
+    </style>
+  </head>
+  <body>
+    Productos Especiales
+
+    <!-- <div class="class1">Parrafo 1</div> -->
+
+    <div class="container">
+        <div>1</div>
+        <div class="second">2</div>
+        <div class="larger">3</div>
+        <div class="first">4</div>
+        <!-- <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div> -->
+    </div>
+  </body>
+</html>
