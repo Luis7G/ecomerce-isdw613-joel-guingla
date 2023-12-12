@@ -1,0 +1,25 @@
+/*variables globales*/
+/*Taller en clase*/
+.general-title {
+  font-family: "Roboto", sans-serif;
+}
+
+.titles-contact {
+  color: red;
+  font-size: 20px;
+}
+
+.input-name, .input-comment, .input-email, .input-date {
+  border-radius: 20%;
+  color: salmon;
+}
+
+.input-comment {
+  height: 100px;
+}
+
+.background-page {
+  background-color: rgb(120, 23, 23);
+}
+
+/*# sourceMappingURL=styles-contact.css.map */

@@ -1,0 +1,25 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.general-title {
+    font-family: $fontFamily-titles;
+}
+
+.titles-contact {
+    @include titles-contact(20px);
+}
+
+.input-name, .input-email, .input-date {
+    border-radius: $borderForm-text;
+    color: salmon;
+}
+
+.input-comment {
+    height: 100px;
+    @extend .input-name
+}
+
+.background-page {
+    background-color: $background-color;
+}
+

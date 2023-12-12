@@ -1,0 +1,45 @@
+/*variables globales*/
+.details {
+  background-color: rgb(120, 23, 23);
+  font-size: 18px;
+  /*variable local*/
+  color: green;
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+.container-header {
+  background-color: rgb(120, 23, 23);
+  font-size: 18px;
+  color: blue;
+  color: red;
+  font-size: 35px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+.button-base, .button-report {
+  border: none;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.button-report {
+  background-color: red;
+}
+
+nav ul li a {
+  font-size: 30px;
+}
+
+title {
+  font-size: 500px;
+}
+
+h1 {
+  font-size: 500px;
+}
+/*# sourceMappingURL=mystyle.css.map */
