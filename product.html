@@ -150,6 +150,49 @@
 
   </table>
 
+  <script>
+    function traverseDOM(node) {
+      /* const anonymFunction = function(a,b){
+        return a+b;
+      }; //Esto es una funcion anonima
+      o tambien
+      const anonymFunction2 = (a,b) => {
+        return a+b;
+      }
+      o tambien
+      const anonymFunction3 = (a,b) => a+b; //Se usa cuando se tiene una sola linea de implementacion
+      console.log(anonymFunction(1,2););
+      console.log(anonymFunction2(1,2););
+      console.log(anonymFunction3(1,2););
+      
+      var arreglo = [1,2,3,4];
+      arreglo.forEach((element)=>{
+        console.log("Elementos del arreglo: ", element);
+      });
+
+      */
+      var childNodes = node.childNodes; /* retorna un arreglo */
+      childNodes.forEach((element) => {
+        console.log("====================");
+        console.log(
+          "Nombre del nodo: " +
+            element.nodeName +
+            " , Tipo:" +
+            element.nodeType +
+            " , Valor:" +
+            element.nodeValue
+        );
+        console.log("Nodo padre: " + element.parentNode);
+
+        if (element.hasChildNodes) {
+          traverseDOM(element);
+        }
+      });
+    }
+    traverseDOM(document.body);
+  </script>
+
+
 </body>
 
 </html>
