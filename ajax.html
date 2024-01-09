@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejemplo de Ajax</title>
+</head>
+
+<body>
+  <div id="userinfo"></div>
+  <button onclick="loadInfo()">View Info</button>
+  <script>
+    function loadInfo() {
+      const httpreq = new XMLHttpRequest();
+      httpreq.onload = function () {
+        console.log(this.responseText);
+        document.getElementById("userinfo").innerHTML = this.responseText;
+      };
+      //Esto no funciona httpreq.open("GET' , "https : //wiki.batocera.org/remappinq_cont ro lator" , true);
+      httpreq.open("GET", "info.txt", true);
+      httpreq.send();
+      console.log("Luego de send...");
+    }
+  </script>
+</body>
+
+</html>

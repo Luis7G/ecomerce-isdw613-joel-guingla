@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Sample</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+</head>
+
+<body>
+
+    <div id="mycontent" class="myclass">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi eveniet fugit voluptate sed, sequi ipsam
+        repudiandae accusantium, hic molestiae ab velit, incidunt officiis nulla cum exercitationem rem cumque? Maxime,
+        iure!
+    </div>
+
+    <!-- <button onclick="hidecontent()">Ocultar</button> -->
+    <button id="btnHide"">Ocultar</button>
+    <div id="mysecondarycontent" style="border: 2px solid red;">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique minima, alias magnam nihil ut quas? Adipisci
+        facilis illo, officia assumenda ipsam doloribus explicabo molestiae dicta tempore optio voluptate! Error, ab.
+    </div>
+    <table id="myTable" class="display">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1 Data 1</td>
+                <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+                <td>Row 2 Data 1</td>
+                <td>Row 2 Data 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Call your modal-->
+    <a id="demo01" href="#animatedModal">DEMO01</a>
+
+    <!--DEMO01-->
+    <div id="animatedModal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+        <div class="close-animatedModal"> 
+            CLOSE MODAL
+        </div>
+            
+        <div class="modal-content">
+                  <!--Your modal content goes here-->
+        </div>
+    </div>
+
+
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+    <script src="js/animatedModal.min.js"></script>  
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+        <script>
+            $("#mysecondarycontent").mouseenter(function () {
+                $(this).css("color", "blue");
+            });
+
+            $("#mysecondarycontent").mouseleave(function () {
+                $(this).css("color", "black");
+            });
+
+
+            function hidecontent() {
+                // document.getElementById("mycontent").style.visibility = "hidden";
+                // $(selector).action()
+                // $("#mycontent").hide();
+                // $(".mycontent").hide(); document.getElementsByClassName("myclass").forEach(element => {//accion de mi elemento});
+                $("div").hide();
+
+                //$("*") -> Seleccionar todos los elementso de la pagina
+                // $("this") -> Obtener el elemento actual
+                // $("p.intro") -> Seleccionar todos los elementos <p> con class="intro"
+                // $("p:first") -> Seleccionar el primer elemento <p>
+                // $("ul li:first") -> Seleccionar el primer elemento <li> de cada <ul>
+                // $("[href]") -> Obtener todos los elementos que tiene el atributo href
+                // $("a[target='_blank']") -> Seleccionar todos los elementos <a> con target="_blank"
+                // $("tr:odd") -> Seleccionar todos los elementos tr que sean impares
+                // $("tr:even") -> Seleccionar todos los elementos tr que sean pares
+            }
+            $(document).ready(function () {
+                console.log("page is ready");
+                $('#myTable').DataTable();
+                $("#demo01").animatedModal();
+            });
+
+            $("#btnHide").click(function () {
+                $(this).text("OCULTO");
+                hidecontent();
+                // console.log("click");
+                // $("#mycontent").hide();
+            });
+        </script>
+</body>
+
+</html>
