@@ -71,8 +71,8 @@
     </ol>
   </nav>
 
-  <form id="contact-spaces" method="POST" action="/contact-process.php" enctype="multipart/form-data"
-    onsubmit="return validateForm();">
+  <!-- <form id="contact-spaces" method="POST" action="/contact-process.php" enctype="multipart/form-data" -->
+  <form id="contact-spaces" method="POST" action="/contact-process-2.php">
     <div class="mb-3">
       <label for="name" class="form-label" style="margin-left: 100px">Nombre</label>
       <input type="text" class="form-control" id="name" aria-describedby="nameHelp"
@@ -89,7 +89,7 @@
         style="max-width: 1200px; margin-left: 170px" onkeydown="OnKeyDownEvent();" id="email"
         placeholder="Ingrese un correo" name="email" />
     </div>
-    <div class="mb-3">
+    <!-- <div class="mb-3">
       <label class="form-label" style="margin-left: 100px" for="date">Fecha</label>
       <input type="date" class="form-control" id="date" style="max-width: 1200px; margin-left: 170px" name="date" />
     </div>
@@ -134,7 +134,7 @@
     <input id="clave" type="password" placeholder="Ingrese la clave" name="clave" />
     <br />
     <label for="invoice">Factura</label>
-    <input type="file" id="invoice" name="invoice" />
+    <input type="file" id="invoice" name="invoice" /> -->
 
     <button type="submit" class="btn btn-primary">Enviar</button>
   </form>
